@@ -1,8 +1,8 @@
 var global = {
     mobileClient: false,
     savePermit: true,
-    usd: 0,
-    eur: 0
+    usd: 30,
+    eur: 35
 };
 
 /**
@@ -80,10 +80,6 @@ $(window).load(function(){
         global.mobileClient = true;
 	}
 
-    $.getJSON("https://api.exchangeratesapi.io/latest?base=RUB&symbols=EUR,USD", function( data ) {
-        global.eur = 1 / data.rates.EUR;
-        global.usd = 1 / data.rates.USD;
-    });
 
 	var account = getCurrentAccount();
 
