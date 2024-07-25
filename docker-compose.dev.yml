@@ -6,57 +6,68 @@ services:
 
   config:
     build: config
+    image: !reset null
     ports:
       - 8888:8888
 
   registry:
     build: registry
+    image: !reset null
 
   gateway:
     build: gateway
+    image: !reset null
 
   auth-service:
     build: auth-service
+    image: !reset null
     ports:
-      - 5000:5000
+      - 5001:5001
 
   auth-mongodb:
-    build: mongodb
     ports:
       - 25000:27017
 
   account-service:
     build: account-service
+    image: !reset null
     ports:
       - 6000:6000
 
   account-mongodb:
     build: mongodb
+    image: !reset null
     ports:
       - 26000:27017
 
   statistics-service:
     build: statistics-service
+    image: !reset null
     ports:
-      - 7000:7000
+      - 7001:7001
 
   statistics-mongodb:
     build: mongodb
+    image: !reset null
     ports:
       - 27000:27017
 
   notification-service:
     build: notification-service
+    image: !reset null
     ports:
       - 8000:8000
 
   notification-mongodb:
     build: mongodb
+    image: !reset null
     ports:
       - 28000:27017
 
   monitoring:
     build: monitoring
+    image: !reset null
 
   turbine-stream-service:
     build: turbine-stream-service
+    image: !reset null
